@@ -42,8 +42,6 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 
 @property (nonatomic) CCKCameraSetupResult setupResult;
 
-@property (nonatomic) BOOL sessionRunning;
-
 @end
 
 @implementation CCKCamman
@@ -360,6 +358,9 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 #pragma mark - Start and Stop
 
 - (void)startRunning {
+    
+    if (self.session.isRunning) return;
+    
     dispatch_async( self.sessionQueue, ^{
         switch (self.setupResult)
         {
@@ -367,7 +368,6 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
             {
                 [self addObservers];
                 [self.session startRunning];
-                self.sessionRunning = self.session.isRunning;
                 break;
             }
             case CCKCameraSetupResultCameraNotAuthorized: {break;}
@@ -377,6 +377,9 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 }
 
 - (void)stopRunning {
+    
+    if (!self.session.isRunning) return;
+    
    	dispatch_async( self.sessionQueue, ^{
         if ( self.setupResult == CCKCameraSetupResultSuccess ) {
             [self.session stopRunning];

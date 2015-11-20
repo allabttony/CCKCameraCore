@@ -48,7 +48,6 @@
     self.bindingHelper = [[CCKControlPanelBindingHelper alloc] initWithCollectionView:_panelView dataSource:nil];
     self.bindingHelper.delegate = self;
     
-    
     NSLog(@"%@", [UIView layerClass]);
 }
 
