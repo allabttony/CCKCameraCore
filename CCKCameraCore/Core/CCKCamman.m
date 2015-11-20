@@ -212,7 +212,7 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 }
 
 - (void)removeObservers {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [self removeObserver:self forKeyPath:@"session.running" context:CCKSessionRunningContext];
     [self removeObserver:self forKeyPath:@"stillImageOutput.capturingStillImage" context:CCKCapturingStillImageContext];
