@@ -1,22 +1,27 @@
 //
-//  AppDelegate.m
+//  CCKAppDelegate.m
 //  CCKCameraCore
 //
 //  Created by Tony on 11/15/15.
 //  Copyright © 2015 tony. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "CCKAppDelegate.h"
+#import "CCKViewController.h"
 
-@interface AppDelegate ()
+@interface CCKAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation CCKAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[CCKViewController alloc] init];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

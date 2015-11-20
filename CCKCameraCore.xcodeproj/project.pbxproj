@@ -7,25 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A5C419E3EBA286E80B7719 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA1C6F6FB0A334FCCA5E81A /* libPods.a */; };
+		EA12B2EE1BFF7E28002985DC /* CCKCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA12B2ED1BFF7E28002985DC /* CCKCameraPreviewView.m */; };
+		EA12B2F11BFF84F9002985DC /* UIImage+CCKImageProccess.m in Sources */ = {isa = PBXBuildFile; fileRef = EA12B2F01BFF84F9002985DC /* UIImage+CCKImageProccess.m */; };
+		EA4AFE301BFC20BA00F0CC78 /* CCKControlPanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4AFE2F1BFC20BA00F0CC78 /* CCKControlPanelCell.m */; };
+		EA4AFE331BFC21B000F0CC78 /* CCKControlPanelBindingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4AFE321BFC21B000F0CC78 /* CCKControlPanelBindingHelper.m */; };
+		EA4C1E711BF8E8FE0005F4AC /* CCKCamman.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4C1E701BF8E8FE0005F4AC /* CCKCamman.m */; };
 		EA860AB31BF8D557000F3C29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA860AB21BF8D557000F3C29 /* main.m */; };
-		EA860AB61BF8D557000F3C29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA860AB51BF8D557000F3C29 /* AppDelegate.m */; };
-		EA860AB91BF8D557000F3C29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA860AB81BF8D557000F3C29 /* ViewController.m */; };
-		EA860ABC1BF8D557000F3C29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA860ABA1BF8D557000F3C29 /* Main.storyboard */; };
+		EA860AB61BF8D557000F3C29 /* CCKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA860AB51BF8D557000F3C29 /* CCKAppDelegate.m */; };
+		EA860AB91BF8D557000F3C29 /* CCKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA860AB81BF8D557000F3C29 /* CCKViewController.m */; };
 		EA860ABE1BF8D557000F3C29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA860ABD1BF8D557000F3C29 /* Assets.xcassets */; };
 		EA860AC11BF8D557000F3C29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA860ABF1BF8D557000F3C29 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		215AB80AD293FEAE71DD2B3E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6CA1C6F6FB0A334FCCA5E81A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CEA1D439D19399FB4E1F50 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EA12B2EC1BFF7E28002985DC /* CCKCameraPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCKCameraPreviewView.h; sourceTree = "<group>"; };
+		EA12B2ED1BFF7E28002985DC /* CCKCameraPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCKCameraPreviewView.m; sourceTree = "<group>"; };
+		EA12B2EF1BFF84F9002985DC /* UIImage+CCKImageProccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CCKImageProccess.h"; sourceTree = "<group>"; };
+		EA12B2F01BFF84F9002985DC /* UIImage+CCKImageProccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CCKImageProccess.m"; sourceTree = "<group>"; };
+		EA4AFE2E1BFC20BA00F0CC78 /* CCKControlPanelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCKControlPanelCell.h; sourceTree = "<group>"; };
+		EA4AFE2F1BFC20BA00F0CC78 /* CCKControlPanelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCKControlPanelCell.m; sourceTree = "<group>"; };
+		EA4AFE311BFC21B000F0CC78 /* CCKControlPanelBindingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCKControlPanelBindingHelper.h; sourceTree = "<group>"; };
+		EA4AFE321BFC21B000F0CC78 /* CCKControlPanelBindingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCKControlPanelBindingHelper.m; sourceTree = "<group>"; };
+		EA4C1E6F1BF8E8FE0005F4AC /* CCKCamman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCKCamman.h; sourceTree = "<group>"; };
+		EA4C1E701BF8E8FE0005F4AC /* CCKCamman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCKCamman.m; sourceTree = "<group>"; };
+		EA4C1E751BF8EDA10005F4AC /* CCKCameraTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKCameraTypes.h; sourceTree = "<group>"; };
 		EA860AAE1BF8D556000F3C29 /* CCKCameraCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCKCameraCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA860AB21BF8D557000F3C29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EA860AB41BF8D557000F3C29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EA860AB51BF8D557000F3C29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA860AB71BF8D557000F3C29 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EA860AB81BF8D557000F3C29 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EA860ABB1BF8D557000F3C29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA860AB41BF8D557000F3C29 /* CCKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKAppDelegate.h; sourceTree = "<group>"; };
+		EA860AB51BF8D557000F3C29 /* CCKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKAppDelegate.m; sourceTree = "<group>"; };
+		EA860AB71BF8D557000F3C29 /* CCKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKViewController.h; sourceTree = "<group>"; };
+		EA860AB81BF8D557000F3C29 /* CCKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKViewController.m; sourceTree = "<group>"; };
 		EA860ABD1BF8D557000F3C29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA860AC01BF8D557000F3C29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA860AC21BF8D557000F3C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA860AC91BF8DACE000F3C29 /* CCKCameraInterfaces.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKCameraInterfaces.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +52,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A5C419E3EBA286E80B7719 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A06212F2852F4F0C0D234B88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CA1C6F6FB0A334FCCA5E81A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB091FD860A5659E158B9C81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78CEA1D439D19399FB4E1F50 /* Pods.debug.xcconfig */,
+				215AB80AD293FEAE71DD2B3E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EA860AA51BF8D556000F3C29 = {
 			isa = PBXGroup;
 			children = (
 				EA860AB01BF8D557000F3C29 /* CCKCameraCore */,
 				EA860AAF1BF8D556000F3C29 /* Products */,
+				DB091FD860A5659E158B9C81 /* Pods */,
+				A06212F2852F4F0C0D234B88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,15 +97,21 @@
 		EA860AB01BF8D557000F3C29 /* CCKCameraCore */ = {
 			isa = PBXGroup;
 			children = (
-				EA860AB41BF8D557000F3C29 /* AppDelegate.h */,
-				EA860AB51BF8D557000F3C29 /* AppDelegate.m */,
-				EA860AB71BF8D557000F3C29 /* ViewController.h */,
-				EA860AB81BF8D557000F3C29 /* ViewController.m */,
-				EA860ABA1BF8D557000F3C29 /* Main.storyboard */,
+				EA12B2EF1BFF84F9002985DC /* UIImage+CCKImageProccess.h */,
+				EA12B2F01BFF84F9002985DC /* UIImage+CCKImageProccess.m */,
+				EA860AC81BF8DAB1000F3C29 /* Core */,
+				EA860AB41BF8D557000F3C29 /* CCKAppDelegate.h */,
+				EA860AB51BF8D557000F3C29 /* CCKAppDelegate.m */,
+				EA860AB71BF8D557000F3C29 /* CCKViewController.h */,
+				EA860AB81BF8D557000F3C29 /* CCKViewController.m */,
 				EA860ABD1BF8D557000F3C29 /* Assets.xcassets */,
 				EA860ABF1BF8D557000F3C29 /* LaunchScreen.storyboard */,
 				EA860AC21BF8D557000F3C29 /* Info.plist */,
 				EA860AB11BF8D557000F3C29 /* Supporting Files */,
+				EA4AFE2E1BFC20BA00F0CC78 /* CCKControlPanelCell.h */,
+				EA4AFE2F1BFC20BA00F0CC78 /* CCKControlPanelCell.m */,
+				EA4AFE311BFC21B000F0CC78 /* CCKControlPanelBindingHelper.h */,
+				EA4AFE321BFC21B000F0CC78 /* CCKControlPanelBindingHelper.m */,
 			);
 			path = CCKCameraCore;
 			sourceTree = "<group>";
@@ -79,6 +124,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EA860AC81BF8DAB1000F3C29 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA860AC91BF8DACE000F3C29 /* CCKCameraInterfaces.h */,
+				EA4C1E751BF8EDA10005F4AC /* CCKCameraTypes.h */,
+				EA4C1E6F1BF8E8FE0005F4AC /* CCKCamman.h */,
+				EA4C1E701BF8E8FE0005F4AC /* CCKCamman.m */,
+				EA12B2EC1BFF7E28002985DC /* CCKCameraPreviewView.h */,
+				EA12B2ED1BFF7E28002985DC /* CCKCameraPreviewView.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA860AC51BF8D557000F3C29 /* Build configuration list for PBXNativeTarget "CCKCameraCore" */;
 			buildPhases = (
+				807414FD289464C90AE238A3 /* Check Pods Manifest.lock */,
 				EA860AAA1BF8D556000F3C29 /* Sources */,
 				EA860AAB1BF8D556000F3C29 /* Frameworks */,
 				EA860AAC1BF8D556000F3C29 /* Resources */,
+				B3A0FF4B633C290AC85C1B99 /* Embed Pods Frameworks */,
+				A6E0DEEFAD4044B16F213F07 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,34 +199,78 @@
 			files = (
 				EA860AC11BF8D557000F3C29 /* LaunchScreen.storyboard in Resources */,
 				EA860ABE1BF8D557000F3C29 /* Assets.xcassets in Resources */,
-				EA860ABC1BF8D557000F3C29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		807414FD289464C90AE238A3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E0DEEFAD4044B16F213F07 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A0FF4B633C290AC85C1B99 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA860AAA1BF8D556000F3C29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA860AB91BF8D557000F3C29 /* ViewController.m in Sources */,
-				EA860AB61BF8D557000F3C29 /* AppDelegate.m in Sources */,
+				EA4C1E711BF8E8FE0005F4AC /* CCKCamman.m in Sources */,
+				EA860AB91BF8D557000F3C29 /* CCKViewController.m in Sources */,
+				EA12B2EE1BFF7E28002985DC /* CCKCameraPreviewView.m in Sources */,
+				EA860AB61BF8D557000F3C29 /* CCKAppDelegate.m in Sources */,
 				EA860AB31BF8D557000F3C29 /* main.m in Sources */,
+				EA4AFE331BFC21B000F0CC78 /* CCKControlPanelBindingHelper.m in Sources */,
+				EA4AFE301BFC20BA00F0CC78 /* CCKControlPanelCell.m in Sources */,
+				EA12B2F11BFF84F9002985DC /* UIImage+CCKImageProccess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EA860ABA1BF8D557000F3C29 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA860ABB1BF8D557000F3C29 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EA860ABF1BF8D557000F3C29 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -259,6 +364,7 @@
 		};
 		EA860AC61BF8D557000F3C29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CEA1D439D19399FB4E1F50 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CCKCameraCore/Info.plist;
@@ -270,6 +376,7 @@
 		};
 		EA860AC71BF8D557000F3C29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 215AB80AD293FEAE71DD2B3E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CCKCameraCore/Info.plist;
@@ -298,6 +405,7 @@
 				EA860AC71BF8D557000F3C29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

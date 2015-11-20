@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CCKAppDelegate.h
 //  CCKCameraCore
 //
 //  Created by Tony on 11/15/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface CCKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
