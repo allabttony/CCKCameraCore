@@ -209,7 +209,7 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 }
 
 - (void)removeObservers {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [self removeObserver:self forKeyPath:@"session.running" context:CCKSessionRunningContext];
     [self removeObserver:self forKeyPath:@"stillImageOutput.capturingStillImage" context:CCKCapturingStillImageContext];
@@ -220,6 +220,8 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
     [self removeObserver:self forKeyPath:@"videoDevice.flashMode" context:CCKFlashModeContext];
     [self removeObserver:self forKeyPath:@"videoDevice.torchMode" context:CCKTorchModeContext];
     [self removeObserver:self forKeyPath:@"videoDevice.position" context:CCKDevicePositionContext];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVCaptureDeviceSubjectAreaDidChangeNotification object:self.videoDevice];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
