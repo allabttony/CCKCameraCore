@@ -53,7 +53,7 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 - (void)dealloc
 {
     dispatch_async( self.sessionQueue, ^{
-        if ( self.setupResult == CCKCameraSetupResultSuccess && !self.session.isRunning) {
+        if ( self.setupResult == CCKCameraSetupResultSuccess && self.session.isRunning) {
             [self.session stopRunning];
             [self removeObservers];
         }
