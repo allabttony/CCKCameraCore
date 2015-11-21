@@ -53,12 +53,11 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 - (void)dealloc
 {
     dispatch_async( self.sessionQueue, ^{
-        if ( self.setupResult == CCKCameraSetupResultSuccess ) {
+        if ( self.setupResult == CCKCameraSetupResultSuccess && !self.session.isRunning) {
             [self.session stopRunning];
             [self removeObservers];
         }
     } );
-    [self removeObservers];
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -482,12 +481,20 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 - (void)adjustExposureBias:(float)bias
 {
     // - 8.0 ~ 8.0
-    bias = bias < - 8.0 ? -8.0 : bias;
-    bias = bias > 8.0 ? 8.0 : bias;
+    float value = 0.f;
+    if (bias < - 8.f)
+    {
+        value = - 8.0;
+    }
+    
+    if (bias > 8.f)
+    {
+        value = 8.f;
+    }
     
     NSError *error;
     if ([self.videoDevice lockForConfiguration:&error]) {
-        [self.videoDevice setExposureTargetBias:bias completionHandler:nil];
+        [self.videoDevice setExposureTargetBias:value completionHandler:nil];
         [self.videoDevice unlockForConfiguration];
     }
     else {

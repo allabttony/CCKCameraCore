@@ -21,6 +21,9 @@
 @end
 
 @implementation CCKViewController
+{
+    CGPoint _startLocation;
+}
 
 - (void)didReceiveMemoryWarning {[super didReceiveMemoryWarning];};
 - (BOOL)prefersStatusBarHidden {return YES;};
@@ -33,6 +36,9 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_tap:)];
     [self.previewView addGestureRecognizer:tap];
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(_slide:)];
+    [self.previewView addGestureRecognizer:pan];
     
     self.camman = [[CCKCamman alloc] initCammanWithPreview:self.previewView];
     self.camman.delegate = self;
@@ -109,6 +115,22 @@
     NSLog(@"Focus (%f, %f)", focusX, focusY);
     
     [self.camman adjustFocusAndExposureAtPoint:CGPointMake(focusX, focusY)];
+}
+
+- (void)_slide:(UIPanGestureRecognizer *)pan
+{
+    if (pan.state == UIGestureRecognizerStateBegan) {
+        _startLocation = [pan locationInView:self.view];
+    }
+    else if (pan.state == UIGestureRecognizerStateChanged) {
+        CGPoint stopLocation = [pan locationInView:self.view];
+        CGFloat dx = stopLocation.x - _startLocation.x;
+        CGFloat dy = stopLocation.y - _startLocation.y;
+        CGFloat distance = sqrt(dx*dx + dy*dy );
+        NSLog(@"Distance: %f", distance);
+        
+        [self.camman adjustExposureBias:distance / 20.f * (_startLocation.y > stopLocation.y ? 1 : - 1)];
+    }
 }
 
 #pragma mark - delegate
