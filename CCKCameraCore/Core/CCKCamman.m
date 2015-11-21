@@ -50,15 +50,15 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
             flashMode = _flashMode,
             torchMode = _torchMode;
 
-- (void)dealloc
-{
-    dispatch_async( self.sessionQueue, ^{
-        if ( self.setupResult == CCKCameraSetupResultSuccess && self.session.isRunning) {
-            [self.session stopRunning];
-            [self removeObservers];
-        }
-    } );
-}
+//- (void)dealloc
+//{
+//    dispatch_async( self.sessionQueue, ^{
+//        if ( self.setupResult == CCKCameraSetupResultSuccess && self.session.isRunning) {
+//            [self.session stopRunning];
+//            [self removeObservers];
+//        }
+//    } );
+//}
 
 - (BOOL)prefersStatusBarHidden
 {
