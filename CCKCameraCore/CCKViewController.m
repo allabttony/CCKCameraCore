@@ -28,7 +28,8 @@
 - (void)didReceiveMemoryWarning {[super didReceiveMemoryWarning];};
 - (BOOL)prefersStatusBarHidden {return YES;};
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.previewView = [[CCKCameraPreviewView alloc] initWithFrame:CGRectMake(0.f, 0.f, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame))];

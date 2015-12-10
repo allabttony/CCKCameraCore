@@ -42,28 +42,18 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
 
 @property (nonatomic) CCKCameraSetupResult setupResult;
 
+@property (nonatomic, readwrite) BOOL sessionRunning;
+
 @end
 
 @implementation CCKCamman
 
 @synthesize delegate  = _delegate,
             flashMode = _flashMode,
-            torchMode = _torchMode;
+            torchMode = _torchMode,
+            sessionRunning = _sessionRunning;
 
-//- (void)dealloc
-//{
-//    dispatch_async( self.sessionQueue, ^{
-//        if ( self.setupResult == CCKCameraSetupResultSuccess && self.session.isRunning) {
-//            [self.session stopRunning];
-//            [self removeObservers];
-//        }
-//    } );
-//}
 
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
 
 - (instancetype)initCammanWithPreview:(CCKCameraPreviewView *)previewView
 {
@@ -369,6 +359,7 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
             {
                 [self addObservers];
                 [self.session startRunning];
+                self.sessionRunning = self.session.isRunning;
                 break;
             }
             case CCKCameraSetupResultCameraNotAuthorized: {break;}
@@ -384,6 +375,7 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
    	dispatch_async( self.sessionQueue, ^{
         if ( self.setupResult == CCKCameraSetupResultSuccess ) {
             [self.session stopRunning];
+            self.sessionRunning = self.session.isRunning;
             [self removeObservers];
         }
     } );
