@@ -448,13 +448,13 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
             }
             else if ( imageDataSampleBuffer ) {
                 NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-                [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-                    [[PHAssetCreationRequest creationRequestForAsset] addResourceWithType:PHAssetResourceTypePhoto data:imageData options:nil];
-                } completionHandler:^( BOOL success, NSError *error ) {
-                    if ( ! success ) {
-                        NSLog( @"Error occured while saving image to photo library: %@", error );
-                    }
-                }];
+//                [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+//                    [[PHAssetCreationRequest creationRequestForAsset] addResourceWithType:PHAssetResourceTypePhoto data:imageData options:nil];
+//                } completionHandler:^( BOOL success, NSError *error ) {
+//                    if ( ! success ) {
+//                        NSLog( @"Error occured while saving image to photo library: %@", error );
+//                    }
+//                }];
                 UIImage *image = [UIImage imageWithData:imageData];
                 if (![self.delegate respondsToSelector:@selector(camman:didSnappedStillImage:)]) return;
                 [self.delegate camman:self didSnappedStillImage:image];
