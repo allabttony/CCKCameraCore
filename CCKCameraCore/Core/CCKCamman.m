@@ -61,6 +61,7 @@ static void * CCKLensStabilizationContext = &CCKLensStabilizationContext;
     
     // session
     self.session = [[AVCaptureSession alloc] init];
+    self.session.sessionPreset = AVCaptureSessionPresetPhoto;
 
     // preview
     self.previewView = previewView;
